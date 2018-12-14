@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:App1"
              x:Class="App1.MainPage">
 
-    <StackLayout Spacing="10" x:Name="layout" BackgroundColor="SlateGray">
+    <!-- StackLayout Spacing="10" Padding="10" x:Name="layout" BackgroundColor="SlateGray">
         <Button Text="StackLayout" VerticalOptions="Start"
         HorizontalOptions="FillAndExpand" />
         <BoxView Color="WhiteSmoke" VerticalOptions="FillAndExpand"
@@ -13,6 +13,32 @@
         HorizontalOptions="FillAndExpand" />
         <BoxView HeightRequest="75" Color="Blue" VerticalOptions="End"
         HorizontalOptions="FillAndExpand" />
-    </StackLayout>
+    </ -->
 
+    <StackLayout Spacing="10" Padding="10" x:Name="layout" BackgroundColor="SlateGray">
+        <ListView  x:Name="AccountsView"
+                   GroupDisplayBinding="{Binding Title}"
+                   GroupShortNameBinding="{Binding Title}"
+                   IsGroupingEnabled="true">>
+
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"
+                    TextColor="#f35e20"
+                    DetailColor="#503026" />
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Button Text="{Binding Name}" VerticalOptions="Start"
+                            HorizontalOptions="FillAndExpand" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
 </ContentPage>
+
