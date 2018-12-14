@@ -2,8 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage" >
 
+    <NavigationPage.TitleView >
+        <Label 
+            Text="Acme Banking"
+        />
+    </NavigationPage.TitleView>
     <!-- StackLayout Spacing="10" Padding="10" x:Name="layout" BackgroundColor="SlateGray">
         <Button Text="StackLayout" VerticalOptions="Start"
         HorizontalOptions="FillAndExpand" />
@@ -32,8 +37,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Button Text="{Binding Name}" VerticalOptions="Start"
-                            HorizontalOptions="FillAndExpand" />
+                        <Button 
+                            Text="{Binding Name}" 
+                            VerticalOptions="Start"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="OnAccountSelected"
+                        />
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

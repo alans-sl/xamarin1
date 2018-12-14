@@ -41,7 +41,7 @@ namespace App1
                     new Account("Mortgage 2")
                 }
             };
-            All = Groups; //set the publicly accessible list
+            All = Groups;
         }
     }
 
@@ -52,6 +52,11 @@ namespace App1
             InitializeComponent();
             AccountsView.ItemsSource = AccountTypeGroup.All;
 
+        }
+
+        async void OnAccountSelected(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AccountDetailPage());
         }
     }
 }
