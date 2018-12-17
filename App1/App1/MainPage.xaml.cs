@@ -34,7 +34,7 @@ namespace App1
             List<AccountTypeGroup> Groups = new List<AccountTypeGroup> {
                 new AccountTypeGroup ("My Savings"){
                     new Account("Savings 1"),
-                    new Account("Savings 2")
+                    new Account("Very very very very very very very very very very very very very very very very very very very very very very very very very very long Savings 2")
                 },
                 new AccountTypeGroup ("My Mortgages"){
                     new Account("Mortgage 1"),
