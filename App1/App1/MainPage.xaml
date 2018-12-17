@@ -36,13 +36,12 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Button 
-                            Text="{Binding Name}" 
-                            VerticalOptions="Start"
-                            HorizontalOptions="FillAndExpand"
-                            Clicked="OnAccountSelected"
-                        />
+                    <ViewCell Tapped="OnAccountSelected">
+                        <AbsoluteLayout>
+                            <Label 
+                                Text="{Binding Name}" 
+                            />
+                        </AbsoluteLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
